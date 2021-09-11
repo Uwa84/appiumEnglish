@@ -3,6 +3,7 @@ package test;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.Test;
 import java.net.MalformedURLException;
@@ -15,8 +16,8 @@ public class FirstClass {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
         //we can write desired capabilities in different ways as below
         //https://appium.io/docs/en/writing-running-appium/caps/
-//        desiredCapabilities.setCapability("platformName","Android");
-//        desiredCapabilities.setCapability(CapabilityType.PLATFORM_NAME,"Android");
+        desiredCapabilities.setCapability("platformName","Android");
+        desiredCapabilities.setCapability(CapabilityType.PLATFORM_NAME,"Android");
 
         desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME,"Android");
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
