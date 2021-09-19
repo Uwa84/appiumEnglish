@@ -32,6 +32,8 @@ public class Calculator {
        verify result
         */
 
+
+
         MobileElement num0 = driver.findElementById("com.google.android.calculator:id/digit_0");
         MobileElement num1 = driver.findElementById("com.google.android.calculator:id/digit_1");
         MobileElement num2 = driver.findElementById("com.google.android.calculator:id/digit_2");
