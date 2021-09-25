@@ -20,6 +20,7 @@ public class EcommerceBaseClass {
         desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME,"RealDevice");
         desiredCapabilities.setCapability(MobileCapabilityType.APP,"/Users/ayyildiz/IdeaProjects/appiumEnglish/Apps/General-Store.apk");
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET,true);
+        desiredCapabilities.setCapability("chromedriverExecutable","/Users/ayyildiz/IdeaProjects/appiumEnglish/chromeDriver/chromedriver");
 
         AndroidDriver<WebElement> driver = new AndroidDriver<>(new URL("http://127.0.0.1:4723/wd/hub"),desiredCapabilities);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
