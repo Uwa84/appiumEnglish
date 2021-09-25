@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Calculator {
+public class CalculatorAndorid {
     @Test
     public void test() throws MalformedURLException, InterruptedException {
         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -31,6 +31,8 @@ public class Calculator {
        check pre-result
        verify result
         */
+
+
 
         MobileElement num0 = driver.findElementById("com.google.android.calculator:id/digit_0");
         MobileElement num1 = driver.findElementById("com.google.android.calculator:id/digit_1");

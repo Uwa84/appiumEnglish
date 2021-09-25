@@ -2,6 +2,7 @@ package test;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -22,6 +23,20 @@ public class BaseClass {
 //        desiredCapabilities.setCapability("appPackage","com.touchboarder.android.api.demos");
 //        desiredCapabilities.setCapability("appActivity","com.touchboarder.androidapidemos.MainActivity");
         AndroidDriver<MobileElement> driver = new AndroidDriver<MobileElement>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        return driver;
+    }
+
+    public static IOSDriver iosDriver() throws MalformedURLException {
+        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "iOS");
+        desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
+        desiredCapabilities.setCapability(MobileCapabilityType.PLATFORM_VERSION, "12.1");
+        desiredCapabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "iPhone 8");
+        desiredCapabilities.setCapability(MobileCapabilityType.BROWSER_NAME,"safari");
+        //desiredCapabilities.setCapability("bundleId", "com.SamadiPour.SimpleCalculator");
+        desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, true);
+        IOSDriver<MobileElement> driver = new IOSDriver<>(new URL("http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
     }
