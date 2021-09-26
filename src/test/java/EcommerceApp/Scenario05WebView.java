@@ -1,6 +1,6 @@
 package EcommerceApp;
 
-import com.sun.tools.internal.xjc.Driver;
+
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.nativekey.AndroidKey;
